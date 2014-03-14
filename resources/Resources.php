@@ -118,6 +118,7 @@ return array(
 		'remoteBasePath' => $GLOBALS['wgStylePath'],
 		'localBasePath' => $GLOBALS['wgStyleDirectory'],
 	),
+		
 	'skins.vector.collapsibleNav' => array(
 		'scripts' => array(
 			'vector/collapsibleNav.js',
@@ -1165,5 +1166,42 @@ return array(
 			'vector' => 'resources/mediawiki.ui/mediawiki.ui.vector.css',
 		),
 		'position' => 'top',
+	),
+	'skins.wizardwars' => array(
+		// Used in the web installer. Test it after modifying this definition!
+		'styles' => array(
+			'common/commonElements.css' => array( 'media' => 'screen' ),
+			'common/commonContent.css' => array( 'media' => 'screen' ),
+			'common/commonInterface.css' => array( 'media' => 'screen' ),
+			'wizardwars/styles.less',
+		),
+		'remoteBasePath' => $GLOBALS['wgStylePath'],
+		'localBasePath' => $GLOBALS['wgStyleDirectory'],
+	),
+	'skins.wizardwars.js' => array(
+		'scripts' => array(
+			'wizardwars/collapsibleTabs.js',
+			'wizardwars/wizardwars.js',
+		),
+		'position' => 'top',
+		'dependencies' => 'jquery.delayedBind',
+		'remoteBasePath' => $GLOBALS['wgStylePath'],
+		'localBasePath' => $GLOBALS['wgStyleDirectory'],
+	),
+	'skins.wizardwars.collapsibleNav' => array(
+		'scripts' => array(
+			'wizardwars/collapsibleNav.js',
+		),
+		'messages' => array(
+			'vector-collapsiblenav-more',
+		),
+		'dependencies' => array(
+			'jquery.client',
+			'jquery.cookie',
+			'jquery.tabIndex',
+		),
+		'remoteBasePath' => $GLOBALS['wgStylePath'],
+		'localBasePath' => $GLOBALS['wgStyleDirectory'],
+		'position' => 'bottom',
 	),
 );

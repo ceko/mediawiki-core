@@ -1,0 +1,85 @@
+html {
+	form.mw-ui-vform {
+	
+		label {
+			color:@subdued-default-text-color;
+		}
+		
+		input:not([type=button]):not([type=submit]):not([type=file]) {
+			font-size:16px;
+			background:#E0E0E0;
+			border:1px solid;
+			border-color:#333;
+			border-radius:3px;
+			padding:5px;			
+			box-shadow: 2px 2px 3px 0px rgba(0,0,0,.5) inset;
+			
+			&:focus {
+				background:#FFF;
+			}
+		}
+	
+	}
+	
+	#mw-createaccount-join {
+		box-shadow: 4px 4px 4px 4px rgba(0,0,0,1);
+	}
+	
+	#mw-createaccount-cta {
+		width:auto;
+	}
+	
+	.mw-createacct-benefits-list {
+		color:#666;
+	}
+	
+	.mw-number-text, .mw-number-text h3 {
+		color:#999;
+	}
+	
+	.errorbox {
+		color: #F7F6F5;
+		border-color: #B44949;
+		background-color: #942A2A;
+	}
+	
+	.mw-notification-area {
+		top:60px;
+		
+		.mw-notification {
+			border: 1px solid @divider-color;			
+			background: @background-color;
+		}
+		
+	}
+	
+}
+
+#editform {
+	.wikiEditor-ui {
+		
+		.wikiEditor-ui-controls {
+			background:@background-color;
+		}
+		
+		.wikiEditor-ui-buttons {
+			background:@background-color;
+			border-top:none;	
+		}
+				
+		.wikiEditor-preview-contents {
+			background:@background-color;
+		}
+		
+		.wikiEditor-ui-view-changes .wikiEditor-preview-contents {
+			background:#FFF;
+		}
+		
+	}
+	.editOptions {
+		color:#333;
+	}
+	.diff {
+		color:#333 !important;
+	}
+}
