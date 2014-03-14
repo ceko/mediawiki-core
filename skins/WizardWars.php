@@ -100,6 +100,9 @@ class WizardWarsTemplate extends BaseTemplate {
 	 * Outputs the entire contents of the (X)HTML page
 	 */
 	public function execute() {
+		if($this->data['content_navigation']['views']['ve-edit']) {
+		//	unset($this->data['content_navigation']['views']['edit']);
+		}
 		// Build additional attributes for navigation urls
 		$nav = $this->data['content_navigation'];
 		
@@ -114,7 +117,7 @@ class WizardWarsTemplate extends BaseTemplate {
 		
 		unset($this->data['personal_urls']['anonuserpage']);
 		unset($this->data['personal_urls']['anontalk']);
-				
+						
 		$xmlID = '';
 		foreach ( $nav as $section => $links ) {
 			foreach ( $links as $key => $link ) {
@@ -217,7 +220,7 @@ class WizardWarsTemplate extends BaseTemplate {
 					<div class='divider'></div>
 					<div id='content'></div>
 					<div id='bodyContent'>
-						<div id='mw-content-text'>
+						<div id='mw-content-text-wrap'>
 							<?php if($this->data['go_back_url']) { $link = $this->data['go_back_url']; ?>
 							<div class='goback'>
 								<a href="<?php echo htmlspecialchars( $link['href'] ) ?>" <?php echo $link['key'] ?>><?php echo $this->getSkin()->getTitle() . ':' . htmlspecialchars( $link['text'] ) ?></a>

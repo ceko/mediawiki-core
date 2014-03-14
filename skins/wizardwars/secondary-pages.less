@@ -83,3 +83,76 @@ html {
 		color:#333 !important;
 	}
 }
+
+.ve-init-mw-viewPageTarget-loading {
+	position: fixed !important;
+	top: 50% !important;
+	left: 50% !important;
+	margin-left: -60px !important;
+}
+	
+.ve-ui-surface-overlay {
+	z-index:100;
+}
+
+#preftoc {
+	list-style-type:none;
+	li {
+		display:inline-block;
+		margin-right:15px;
+		opacity:.6;
+		&.selected {
+			opacity:1;
+		}
+	}
+}
+
+.action-history {
+	#mw-content-text {
+		font-size:.8em;
+	}
+	
+	#pagehistory {
+		list-style-type:none;
+		li:not(.selected) {
+			border:1px solid @background-color;
+		}
+		li.selected {
+			background:none;
+		}
+	}
+	
+}
+
+.mw-special-Contributions {
+	#mw-content-text {
+		font-size:.8em;
+		
+		> ul {
+			list-style-type:none;
+		}
+	}	
+	
+	
+}
+
+#mw-content-text .diff {
+	color:#333;
+}
+
+.mw-search-formheader {
+	background:none;
+	border:none;
+	
+	.search-types ul {
+		li {
+			a { opacity:.6; }
+			&.current {
+				a { 
+					opacity:1;
+					color:@link-color !important;
+				}
+			}
+		}
+	}
+}
